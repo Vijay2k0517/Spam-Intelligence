@@ -1,0 +1,57 @@
+{
+  "filepath": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\data\\raw\\SMSSpamCollection",
+  "encoding_used": "utf-8",
+  "total_input_records": 5574,
+  "invalid_records_count": 0,
+  "duplicates_removed_count": 414,
+  "retained_records_count": 5160,
+  "raw_class_distribution": {
+    "ham": 4827,
+    "spam": 747
+  },
+  "retained_class_distribution": {
+    "ham": 4518,
+    "spam": 642
+  },
+  "spam_prevalence_pct": 12.44,
+  "ham_count": 4518,
+  "spam_count": 642,
+  "deduplication_policy": "Exact duplicate removal on 'text' column (keeping first occurrence)",
+  "reference_paper_comparison": {
+    "reference_paper_raw_total": 5574,
+    "reference_paper_duplicates_removed": 415,
+    "reference_paper_retained": 5159,
+    "reference_paper_ham": 4518,
+    "reference_paper_spam": 641,
+    "actual_raw_total": 5574,
+    "actual_duplicates_removed": 414,
+    "actual_retained": 5160,
+    "actual_ham": 4518,
+    "actual_spam": 642,
+    "note": "Actual deduplication by message text removes 414 duplicate records from 5574 raw messages, retaining 5160 unique messages (4518 ham, 642 spam). The reference paper reports 415 duplicates and 5159 retained messages (4518 ham, 641 spam). Actual values are preserved and reported."
+  },
+  "char_length_stats": {
+    "ham": {
+      "mean": 70.86077910579903,
+      "median": 53.0,
+      "std": 56.58472957041811
+    },
+    "spam": {
+      "mean": 137.41433021806853,
+      "median": 148.0,
+      "std": 29.97559559017885
+    }
+  },
+  "token_count_stats": {
+    "ham": {
+      "mean": 14.233289065958388,
+      "median": 11.0,
+      "std": 11.161622963058125
+    },
+    "spam": {
+      "mean": 23.6993769470405,
+      "median": 25.0,
+      "std": 5.968583866458592
+    }
+  }
+}

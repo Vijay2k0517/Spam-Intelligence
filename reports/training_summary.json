@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETED",
+  "timestamp": "2026-10-11T09:46:55.313329+00:00",
+  "total_elapsed_seconds": 74.66,
+  "dataset_path": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\data\\raw\\SMSSpamCollection",
+  "dataset_sha256": "7d039a24a6083ed9ef0f806ebad56bbb976e3aeb8de05669173bfdc4996c239d",
+  "total_records": 5160,
+  "train_samples": 4128,
+  "test_samples": 1032,
+  "vocabulary_size_standard": 7712,
+  "vocabulary_size_stemmed": 7279,
+  "metadata_feature_count_core": 19,
+  "metadata_feature_count_extended": 22,
+  "models_evaluated": 18,
+  "model_selection_cross_validation": {
+    "selected_model": "hybrid_mnb",
+    "selected_model_cv_f1": 0.9501,
+    "selected_model_cv_accuracy": 0.9881,
+    "cv_report_path": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\reports\\model_selection_cv.json"
+  },
+  "selection_bias_disclosure": "The 80:20 held-out test split results represent an exploratory benchmark. Repeated model comparison on that split carries selection bias risk. Candidate selection was determined strictly via 5-Fold Stratified Cross-Validation on the training partition (4,128 samples). For unbiased final performance estimation, a genuinely independent external test set or separate split should be evaluated only after freezing all choices.",
+  "prediction_comparison_audit_path": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\reports\\prediction_comparison_audit.json",
+  "reports": {
+    "metrics_json": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\reports\\experiment_metrics.json",
+    "comparison_csv": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\reports\\experiment_comparison.csv",
+    "classification_reports_json": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\reports\\classification_reports.json"
+  },
+  "manifest_path": "C:\\Users\\priya\\OneDrive\\Desktop\\client-project\\artifacts\\manifest.json"
+}

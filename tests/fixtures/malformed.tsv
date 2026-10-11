@@ -1,0 +1,6 @@
+ham	Valid message one
+this line has no tab separator
+
+invalid_label	Message with invalid label
+spam	
+spam	Valid spam message with phone 08001234567

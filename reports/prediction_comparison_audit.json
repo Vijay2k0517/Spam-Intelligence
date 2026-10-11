@@ -1,0 +1,59 @@
+{
+  "svm_scaled_19_vs_22_comparison": {
+    "total_samples": 1032,
+    "identical_predictions_count": 1032,
+    "differing_predictions_count": 0,
+    "agreement_rate": 1.0,
+    "differing_decision_scores_count": 1017,
+    "differing_decision_scores_percentage": 98.55,
+    "max_abs_decision_score_difference": 0.0927,
+    "mean_abs_decision_score_difference": 0.009486,
+    "extended_features_affect_predictions": "Yes. The 3 added VADER sentiment features actively perturb continuous decision scores for 1017 out of 1032 test samples (98.55%). However, because the margin around the 0.0 threshold is stable, none of the score shifts crossed the decision boundary on this evaluation split, resulting in identical discrete class labels and confusion matrix totals.",
+    "scaler_includes_all_intended_continuous_features": true,
+    "core_19_model_schema": {
+      "feature_space_dimension": 7731,
+      "metadata_feature_count": 19,
+      "continuous_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "continuous_features_count": 8
+    },
+    "extended_22_model_schema": {
+      "feature_space_dimension": 7734,
+      "metadata_feature_count": 22,
+      "continuous_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        19,
+        20,
+        21
+      ],
+      "continuous_features_count": 11
+    }
+  },
+  "text_nb_vs_text_svm_comparison": {
+    "total_samples": 1032,
+    "identical_predictions_count": 1018,
+    "differing_predictions_count": 14,
+    "agreement_rate": 0.9864,
+    "spams_caught_by_nb_only": 6,
+    "spams_caught_by_svm_only": 6,
+    "ham_misclassified_by_nb_only": 1,
+    "ham_misclassified_by_svm_only": 1,
+    "contingency_counts_identical": true,
+    "explanation": "The confusion matrix totals (103 TP, 903 TN, 1 FP, 25 FN) match between text NB and text SVM purely due to a symmetrical error trade-off. The models disagree on 14 samples: NB correctly caught 6 spams missed by SVM, while SVM correctly caught 6 spams missed by NB. Each model also committed 1 false positive on different ham messages."
+  }
+}

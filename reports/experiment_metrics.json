@@ -1,0 +1,758 @@
+[
+  {
+    "experiment_id": "E1",
+    "model_name": "text_nb",
+    "feature_space": "textual",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9748,
+    "spam_precision": 0.9904,
+    "spam_recall": 0.8047,
+    "spam_f1": 0.8879,
+    "macro_f1": 0.9369,
+    "weighted_f1": 0.9737,
+    "roc_auc": 0.9954,
+    "pr_auc": 0.9879,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 25,
+      "tp": 103
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9730603448275862,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9858078602620087,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9903846153846154,
+        "recall": 0.8046875,
+        "f1_score": 0.8879310344827587,
+        "support": 128
+      }
+    },
+    "feature_count": 7712,
+    "feature_mode": "textual",
+    "scaling": "none",
+    "preprocessing_details": "Standard BoW (lowercase + url_padding + control_chars)",
+    "model_parameters": "alpha=1.0, binarize=0.0"
+  },
+  {
+    "experiment_id": "E2",
+    "model_name": "text_svm",
+    "feature_space": "textual",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9748,
+    "spam_precision": 0.9904,
+    "spam_recall": 0.8047,
+    "spam_f1": 0.8879,
+    "macro_f1": 0.9369,
+    "weighted_f1": 0.9737,
+    "roc_auc": 0.9925,
+    "pr_auc": 0.9736,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 25,
+      "tp": 103
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9730603448275862,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9858078602620087,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9903846153846154,
+        "recall": 0.8046875,
+        "f1_score": 0.8879310344827587,
+        "support": 128
+      }
+    },
+    "feature_count": 7712,
+    "feature_mode": "textual",
+    "scaling": "none",
+    "preprocessing_details": "Standard BoW (lowercase + url_padding + control_chars)",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E3",
+    "model_name": "metadata_nb",
+    "feature_space": "metadata",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9797,
+    "spam_precision": 0.9573,
+    "spam_recall": 0.875,
+    "spam_f1": 0.9143,
+    "macro_f1": 0.9514,
+    "weighted_f1": 0.9793,
+    "roc_auc": 0.9869,
+    "pr_auc": 0.9653,
+    "confusion_matrix": {
+      "tn": 899,
+      "fp": 5,
+      "fn": 16,
+      "tp": 112
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9825136612021858,
+        "recall": 0.9944690265486725,
+        "f1_score": 0.9884551951621771,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9572649572649573,
+        "recall": 0.875,
+        "f1_score": 0.9142857142857143,
+        "support": 128
+      }
+    },
+    "feature_count": 19,
+    "feature_mode": "paper_core",
+    "scaling": "none",
+    "preprocessing_details": "Raw text preserved",
+    "model_parameters": "alpha=1.0, binarize=0.0"
+  },
+  {
+    "experiment_id": "E4",
+    "model_name": "metadata_svm",
+    "feature_space": "metadata",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.937,
+    "spam_precision": 0.8621,
+    "spam_recall": 0.5859,
+    "spam_f1": 0.6977,
+    "macro_f1": 0.8313,
+    "weighted_f1": 0.9317,
+    "roc_auc": 0.9463,
+    "pr_auc": 0.7643,
+    "confusion_matrix": {
+      "tn": 892,
+      "fp": 12,
+      "fn": 53,
+      "tp": 75
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9439153439153439,
+        "recall": 0.9867256637168141,
+        "f1_score": 0.9648458626284478,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.8620689655172413,
+        "recall": 0.5859375,
+        "f1_score": 0.6976744186046512,
+        "support": 128
+      }
+    },
+    "feature_count": 19,
+    "feature_mode": "paper_core",
+    "scaling": "none",
+    "preprocessing_details": "Raw text preserved",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E5",
+    "model_name": "hybrid_nb",
+    "feature_space": "hybrid",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9806,
+    "spam_precision": 0.9821,
+    "spam_recall": 0.8594,
+    "spam_f1": 0.9167,
+    "macro_f1": 0.9529,
+    "weighted_f1": 0.9801,
+    "roc_auc": 0.9992,
+    "pr_auc": 0.9942,
+    "confusion_matrix": {
+      "tn": 902,
+      "fp": 2,
+      "fn": 18,
+      "tp": 110
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9804347826086957,
+        "recall": 0.9977876106194691,
+        "f1_score": 0.9890350877192983,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9821428571428571,
+        "recall": 0.859375,
+        "f1_score": 0.9166666666666666,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "none",
+    "preprocessing_details": "Dual stream (std text + raw meta)",
+    "model_parameters": "alpha=1.0, binarize=0.0"
+  },
+  {
+    "experiment_id": "E6",
+    "model_name": "hybrid_svm",
+    "feature_space": "hybrid",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9419,
+    "spam_precision": 0.8778,
+    "spam_recall": 0.6172,
+    "spam_f1": 0.7248,
+    "macro_f1": 0.8461,
+    "weighted_f1": 0.9374,
+    "roc_auc": 0.962,
+    "pr_auc": 0.8009,
+    "confusion_matrix": {
+      "tn": 893,
+      "fp": 11,
+      "fn": 49,
+      "tp": 79
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9479830148619958,
+        "recall": 0.9878318584070797,
+        "f1_score": 0.9674972914409534,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.8777777777777778,
+        "recall": 0.6171875,
+        "f1_score": 0.7247706422018348,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "none",
+    "preprocessing_details": "Dual stream (std text + raw meta)",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E6_scaled_minmax",
+    "model_name": "hybrid_svm_scaled_minmax",
+    "feature_space": "hybrid",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9855,
+    "spam_precision": 0.9913,
+    "spam_recall": 0.8906,
+    "spam_f1": 0.9383,
+    "macro_f1": 0.965,
+    "weighted_f1": 0.9851,
+    "roc_auc": 0.9974,
+    "pr_auc": 0.9855,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 14,
+      "tp": 114
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9847328244274809,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9917627677100495,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.991304347826087,
+        "recall": 0.890625,
+        "f1_score": 0.9382716049382716,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "minmax_continuous",
+    "preprocessing_details": "Dual stream + MinMaxScaler on 8 continuous features",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E6_scaled_std",
+    "model_name": "hybrid_svm_scaled_std",
+    "feature_space": "hybrid",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9787,
+    "spam_precision": 0.9649,
+    "spam_recall": 0.8594,
+    "spam_f1": 0.9091,
+    "macro_f1": 0.9485,
+    "weighted_f1": 0.9781,
+    "roc_auc": 0.9968,
+    "pr_auc": 0.981,
+    "confusion_matrix": {
+      "tn": 900,
+      "fp": 4,
+      "fn": 18,
+      "tp": 110
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9803921568627451,
+        "recall": 0.995575221238938,
+        "f1_score": 0.9879253567508233,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9649122807017544,
+        "recall": 0.859375,
+        "f1_score": 0.9090909090909091,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "standard_continuous",
+    "preprocessing_details": "Dual stream + StandardScaler on 8 continuous features",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E6_linear",
+    "model_name": "hybrid_svm_linear",
+    "feature_space": "hybrid",
+    "classifier": "SVC_Linear",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9855,
+    "spam_precision": 0.9748,
+    "spam_recall": 0.9062,
+    "spam_f1": 0.9393,
+    "macro_f1": 0.9655,
+    "weighted_f1": 0.9852,
+    "roc_auc": 0.997,
+    "pr_auc": 0.9848,
+    "confusion_matrix": {
+      "tn": 901,
+      "fp": 3,
+      "fn": 12,
+      "tp": 116
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9868565169769989,
+        "recall": 0.9966814159292036,
+        "f1_score": 0.9917446340121079,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9747899159663865,
+        "recall": 0.90625,
+        "f1_score": 0.9392712550607287,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "none",
+    "preprocessing_details": "Dual stream + Linear SVM kernel",
+    "model_parameters": "C=1.0, kernel=linear"
+  },
+  {
+    "experiment_id": "E5_mnb",
+    "model_name": "hybrid_mnb",
+    "feature_space": "hybrid",
+    "classifier": "MultinomialNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9884,
+    "spam_precision": 0.9915,
+    "spam_recall": 0.9141,
+    "spam_f1": 0.9512,
+    "macro_f1": 0.9723,
+    "weighted_f1": 0.9882,
+    "roc_auc": 0.9739,
+    "pr_auc": 0.9535,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 11,
+      "tp": 117
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9879649890590809,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9933993399339934,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9915254237288136,
+        "recall": 0.9140625,
+        "f1_score": 0.9512195121951219,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "none",
+    "preprocessing_details": "Dual stream + MultinomialNB (preserves raw continuous magnitudes)",
+    "model_parameters": "alpha=1.0"
+  },
+  {
+    "experiment_id": "E5_median_thresh",
+    "model_name": "hybrid_nb_median_thresh",
+    "feature_space": "hybrid",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9826,
+    "spam_precision": 0.9825,
+    "spam_recall": 0.875,
+    "spam_f1": 0.9256,
+    "macro_f1": 0.9579,
+    "weighted_f1": 0.9821,
+    "roc_auc": 0.9988,
+    "pr_auc": 0.9917,
+    "confusion_matrix": {
+      "tn": 902,
+      "fp": 2,
+      "fn": 16,
+      "tp": 112
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9825708061002179,
+        "recall": 0.9977876106194691,
+        "f1_score": 0.9901207464324918,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9824561403508771,
+        "recall": 0.875,
+        "f1_score": 0.9256198347107438,
+        "support": 128
+      }
+    },
+    "feature_count": 7731,
+    "feature_mode": "paper_core",
+    "scaling": "median_threshold",
+    "preprocessing_details": "Dual stream + continuous features binarized at train-split medians",
+    "model_parameters": "alpha=1.0, binarize=0.0 (pre-thresholded at median)"
+  },
+  {
+    "experiment_id": "E3_ext22",
+    "model_name": "metadata_nb_22",
+    "feature_space": "metadata",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9758,
+    "spam_precision": 0.9256,
+    "spam_recall": 0.875,
+    "spam_f1": 0.8996,
+    "macro_f1": 0.9429,
+    "weighted_f1": 0.9755,
+    "roc_auc": 0.9842,
+    "pr_auc": 0.9616,
+    "confusion_matrix": {
+      "tn": 895,
+      "fp": 9,
+      "fn": 16,
+      "tp": 112
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9824368825466521,
+        "recall": 0.9900442477876106,
+        "f1_score": 0.9862258953168044,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9256198347107438,
+        "recall": 0.875,
+        "f1_score": 0.8995983935742972,
+        "support": 128
+      }
+    },
+    "feature_count": 22,
+    "feature_mode": "paper_extended",
+    "scaling": "none",
+    "preprocessing_details": "Raw text preserved + VADER sentiment",
+    "model_parameters": "alpha=1.0, binarize=0.0"
+  },
+  {
+    "experiment_id": "E4_ext22",
+    "model_name": "metadata_svm_22",
+    "feature_space": "metadata",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.936,
+    "spam_precision": 0.8605,
+    "spam_recall": 0.5781,
+    "spam_f1": 0.6916,
+    "macro_f1": 0.828,
+    "weighted_f1": 0.9305,
+    "roc_auc": 0.946,
+    "pr_auc": 0.7639,
+    "confusion_matrix": {
+      "tn": 892,
+      "fp": 12,
+      "fn": 54,
+      "tp": 74
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9429175475687104,
+        "recall": 0.9867256637168141,
+        "f1_score": 0.9643243243243244,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.8604651162790697,
+        "recall": 0.578125,
+        "f1_score": 0.6915887850467289,
+        "support": 128
+      }
+    },
+    "feature_count": 22,
+    "feature_mode": "paper_extended",
+    "scaling": "none",
+    "preprocessing_details": "Raw text preserved + VADER sentiment",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E5_ext22",
+    "model_name": "hybrid_nb_22",
+    "feature_space": "hybrid",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9816,
+    "spam_precision": 0.9823,
+    "spam_recall": 0.8672,
+    "spam_f1": 0.9212,
+    "macro_f1": 0.9554,
+    "weighted_f1": 0.9811,
+    "roc_auc": 0.999,
+    "pr_auc": 0.9933,
+    "confusion_matrix": {
+      "tn": 902,
+      "fp": 2,
+      "fn": 17,
+      "tp": 111
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9815016322089227,
+        "recall": 0.9977876106194691,
+        "f1_score": 0.9895776193088316,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9823008849557522,
+        "recall": 0.8671875,
+        "f1_score": 0.921161825726141,
+        "support": 128
+      }
+    },
+    "feature_count": 7734,
+    "feature_mode": "paper_extended",
+    "scaling": "none",
+    "preprocessing_details": "Dual stream (std text + 22 metadata)",
+    "model_parameters": "alpha=1.0, binarize=0.0"
+  },
+  {
+    "experiment_id": "E6_ext22_scaled",
+    "model_name": "hybrid_svm_22_scaled",
+    "feature_space": "hybrid",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9855,
+    "spam_precision": 0.9913,
+    "spam_recall": 0.8906,
+    "spam_f1": 0.9383,
+    "macro_f1": 0.965,
+    "weighted_f1": 0.9851,
+    "roc_auc": 0.9974,
+    "pr_auc": 0.9854,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 14,
+      "tp": 114
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9847328244274809,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9917627677100495,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.991304347826087,
+        "recall": 0.890625,
+        "f1_score": 0.9382716049382716,
+        "support": 128
+      }
+    },
+    "feature_count": 7734,
+    "feature_mode": "paper_extended",
+    "scaling": "minmax_continuous",
+    "preprocessing_details": "Dual stream + MinMaxScaler on 11 continuous features (8 core + 3 sentiment)",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E1_stemmed",
+    "model_name": "text_nb_stemmed",
+    "feature_space": "textual",
+    "classifier": "BernoulliNB",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9709,
+    "spam_precision": 0.99,
+    "spam_recall": 0.7734,
+    "spam_f1": 0.8684,
+    "macro_f1": 0.926,
+    "weighted_f1": 0.9694,
+    "roc_auc": 0.9933,
+    "pr_auc": 0.9846,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 29,
+      "tp": 99
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9688841201716738,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9836601307189542,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.99,
+        "recall": 0.7734375,
+        "f1_score": 0.868421052631579,
+        "support": 128
+      }
+    },
+    "feature_count": 7279,
+    "feature_mode": "textual",
+    "scaling": "none",
+    "preprocessing_details": "Porter stemming + stopword filtering",
+    "model_parameters": "alpha=1.0, binarize=0.0"
+  },
+  {
+    "experiment_id": "E2_stemmed",
+    "model_name": "text_svm_stemmed",
+    "feature_space": "textual",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9767,
+    "spam_precision": 0.9906,
+    "spam_recall": 0.8203,
+    "spam_f1": 0.8974,
+    "macro_f1": 0.9422,
+    "weighted_f1": 0.9758,
+    "roc_auc": 0.9919,
+    "pr_auc": 0.9743,
+    "confusion_matrix": {
+      "tn": 903,
+      "fp": 1,
+      "fn": 23,
+      "tp": 105
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9751619870410367,
+        "recall": 0.9988938053097345,
+        "f1_score": 0.9868852459016394,
+        "support": 904
+      },
+      "spam": {
+        "precision": 0.9905660377358491,
+        "recall": 0.8203125,
+        "f1_score": 0.8974358974358975,
+        "support": 128
+      }
+    },
+    "feature_count": 7279,
+    "feature_mode": "textual",
+    "scaling": "none",
+    "preprocessing_details": "Porter stemming + stopword filtering",
+    "model_parameters": "C=1.0, kernel=rbf"
+  },
+  {
+    "experiment_id": "E6_stemmed_scaled",
+    "model_name": "hybrid_svm_stemmed_scaled",
+    "feature_space": "hybrid",
+    "classifier": "SVC",
+    "total_samples": 1032,
+    "ham_support": 904,
+    "spam_support": 128,
+    "accuracy": 0.9874,
+    "spam_precision": 1.0,
+    "spam_recall": 0.8984,
+    "spam_f1": 0.9465,
+    "macro_f1": 0.9697,
+    "weighted_f1": 0.9871,
+    "roc_auc": 0.996,
+    "pr_auc": 0.9837,
+    "confusion_matrix": {
+      "tn": 904,
+      "fp": 0,
+      "fn": 13,
+      "tp": 115
+    },
+    "per_class_metrics": {
+      "ham": {
+        "precision": 0.9858233369683751,
+        "recall": 1.0,
+        "f1_score": 0.9928610653487095,
+        "support": 904
+      },
+      "spam": {
+        "precision": 1.0,
+        "recall": 0.8984375,
+        "f1_score": 0.9465020576131687,
+        "support": 128
+      }
+    },
+    "feature_count": 7298,
+    "feature_mode": "paper_core",
+    "scaling": "minmax_continuous",
+    "preprocessing_details": "Stemmed text + scaled Core 19 metadata",
+    "model_parameters": "C=1.0, kernel=rbf"
+  }
+]
